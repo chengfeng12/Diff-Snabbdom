@@ -15,10 +15,10 @@ export default function h(sel, data, c) {
   if (arguments.length !== 3) {
     throw new Error('参数不符合要求，必须为 3 个参数')
   } else if (typeof c === 'string' || typeof c === 'number') {
-    console.log('文本类型');
+    // 文本类型
     return vnode(sel, data, undefined, c, undefined)
   } else if (Array.isArray(c)) {
-    console.log('带有子集');
+    // 带有子集
     let children = [];
     for (let i = 0; i < c.length; i++) {
       if (!(typeof c[i] === 'object' && c[i].hasOwnProperty('sel')))
