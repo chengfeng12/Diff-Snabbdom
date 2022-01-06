@@ -8,10 +8,10 @@ export default function createElement(vnode) {
   } else if (vnode.children.length >= 0 && Array.isArray(vnode.children)) {
     for (let i = 0; i < vnode.children.length; i++) {
       const childNode = createElement(vnode.children[i]);
-      console.log(childNode);
+      vnode.children[i].elm = childNode;
       domNode.appendChild(childNode);
     }
   }
-  
+  vnode.elm = domNode;
   return domNode
 }
