@@ -27,14 +27,22 @@ const btn = document.getElementById('btn');
   h('li', {}, "B"),
   h('li', {}, "C"),
 ] */
-const vnode1 = h('ul', {}, "测试一段文字")
+const vnode1 = h('ul', {}, [
+  h('li', { key: "A" }, "A"),
+  h('li', { key: "B" }, "B"),
+  h('li', { key: "C" }, "C"),
+])
 
 
 const vnode2 = h('ul', {}, [
-  h('li', {}, "A"),
-  h('li', {}, "B"),
-  h('li', {}, "C"),
-  h('li', {}, "D")
+  h('li', { key: "Z" }, "Z"),
+  h('li', { key: "A" }, "A"),
+  h('li', { key: "B" }, "B"),
+  h('li', { key: "M" }, "M"),
+  h('li', { key: "M" }, "M"),
+  h('li', { key: "C" }, "C"),
+  h('li', { key: "D" }, "D"),
+  h('li', { key: "E" }, "E"),
 ])
 
 
